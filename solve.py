@@ -28,7 +28,7 @@ def main():
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='Shortest path between two cities')
+    parser = argparse.ArgumentParser(description='Finds the shortest path between two vertices')
     parser.add_argument('input', type=str, help='input file path')
     parser.add_argument('--output', type=str, default='test.out', help='output file path')
     return parser.parse_args()
@@ -36,7 +36,7 @@ def parse_arguments():
 
 class DijkstraShortestPathSolver:
     """
-    The Dijkstra algorithm for finding the shortest paths between vertices in a graph
+    The Dijkstra algorithm for finding the shortest paths between two vertices in a graph
     https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
     """
 
