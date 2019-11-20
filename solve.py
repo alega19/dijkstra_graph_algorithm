@@ -98,9 +98,9 @@ class DijkstraShortestPathSolver:
             vertices = sorted(vertices, key=lambda vertex: self._edge_to_weight[Edge(current_vertex, vertex)])
             for vertex in vertices:
                 edge = Edge(current_vertex, vertex)
-                min_duration = self._vertex_to_min_weight[current_vertex] + self._edge_to_weight[edge]
-                if min_duration < self._vertex_to_min_weight[vertex]:
-                    self._vertex_to_min_weight[vertex] = min_duration
+                min_weight = self._vertex_to_min_weight[current_vertex] + self._edge_to_weight[edge]
+                if min_weight < self._vertex_to_min_weight[vertex]:
+                    self._vertex_to_min_weight[vertex] = min_weight
             unchecked_vertices.remove(current_vertex)
 
         self.min_weight = self._vertex_to_min_weight[self._finish_vertex]
